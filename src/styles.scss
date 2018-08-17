@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'variables';
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+$asistencia-red: #fb4343;
+$footer-height: 60px;
+
+.full-content {
+  width: 100%;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: $footer-height; /* Margin bottom by footer height */
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: $footer-height; /* Set the fixed height of the footer here */
+  line-height: $footer-height; /* Vertically center the text there */
+  background-color: $asistencia-red;
+}
