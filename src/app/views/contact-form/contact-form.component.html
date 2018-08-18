@@ -1,0 +1,76 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+  <div class="form-row">
+    <div class="col">
+      <div class="form-group">
+        <input type="text" class="form-control" formControlName="nameLastName" placeholder="Nombre y Apellidos" [class.is-valid]="nameLastName.valid" [class.is-invalid]="nameLastName.invalid && nameLastName.touched" />
+        <div ngxErrors="nameLastName" class="invalid-feedback">
+          <p class="my-0" *ngFor="let error of errors" [ngxError]="error.name" [when]="error.rules">
+            {{ error.text }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col">
+      <div class="form-group">
+        <input type="text" class="form-control" formControlName="phone" placeholder="Teléfono de Contacto" [class.is-valid]="phone.valid" [class.is-invalid]="phone.invalid && phone.touched" />
+        <div ngxErrors="phone" class="invalid-feedback">
+          <p class="my-0" *ngFor="let error of errors" [ngxError]="error.name" [when]="error.rules">
+            {{ error.text }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col">
+      <div class="form-group">
+        <input type="text" class="form-control" formControlName="email" placeholder="Correo Electrónico" [class.is-valid]="email.valid" [class.is-invalid]="email.invalid && email.touched" />
+        <div ngxErrors="email" class="invalid-feedback">
+          <p class="my-0" *ngFor="let error of errors" [ngxError]="error.name" [when]="error.rules">
+            {{ error.text }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col">
+      <div class="form-group">
+        <div class="form-group">
+          <select name="assistance" formControlName="assistance" class="form-control" [class.is-valid]="assistance.valid" [class.is-invalid]="assistance.touched && assistance.invalid">
+            <option [value]="null">Seleccione su asistencia...</option>
+            <option *ngFor="let value of assistanceDDL" [ngValue]="value.description">
+              {{value.name}}
+            </option>
+          </select>
+
+
+          <div ngxErrors="assistance" class="invalid-feedback">
+            <p class="my-0" *ngFor="let error of errors" [ngxError]="error.name" [when]="error.rules">
+              {{ error.text }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col">
+      <div class="form-group">
+        <textarea rows="5" class="form-control" formControlName="message" placeholder="Mensaje" [class.is-valid]="message.valid" [class.is-invalid]="message.invalid && message.touched"></textarea>
+        <div ngxErrors="message" class="invalid-feedback">
+          <p class="my-0" *ngFor="let error of errors" [ngxError]="error.name" [when]="error.rules">
+            {{ error.text }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col">
+      <button type="submit" class="btn btn-lg btn-primary btn-block" [class.btn-success]="contactForm.valid" [disabled]="contactForm.invalid">Agendar</button>
+    </div>
+  </div>
+</form>
