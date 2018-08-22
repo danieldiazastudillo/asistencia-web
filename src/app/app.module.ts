@@ -10,13 +10,19 @@ import { ContactFormComponent } from './views/contact-form/contact-form.componen
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxErrorsModule } from '@ultimate/ngxerrors';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { JumbotronComponent } from './views/jumbotron/jumbotron.component';
+import { AssistStepsComponent } from './views/assist-steps/assist-steps.component';
+import { AssistServicesComponent } from './views/assist-services/assist-services.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    AssistStepsComponent,
+    AssistServicesComponent,
+    ContactFormComponent,
     HomeComponent,
-    VideoPopperComponent,
-    ContactFormComponent
+    JumbotronComponent,
+    VideoPopperComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'asistencia-web'}),

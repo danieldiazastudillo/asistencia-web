@@ -1,0 +1,11 @@
+.jumbo-container {
+    min-height: 500px !important;
+    background-size: cover;
+    background-color: gray;    
+}
+
+$asistencia-gris-oscuro: #e6e6e6;
+
+.steps-container {
+    background-color: $asistencia-gris-oscuro;
+}
