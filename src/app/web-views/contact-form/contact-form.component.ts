@@ -1,14 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, AbstractControl, Validators } from '@angular/forms';
+import { AssistanceService } from '../../services/assistance.service';
+import { IAssistServices } from '../../interfaces/assist-services.interface';
+import { ErrorsService } from '../../services/errors.service';
 
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contact-form.component.html',
-  styleUrls: ['./contact-form.component.scss']
+  styleUrls: ['./contact-form.component.scss'],
+  providers: [AssistanceService, ErrorsService]
 })
 export class ContactFormComponent implements OnInit {
 
-  constructor(private _fb: FormBuilder) { }
+  constructor(private _fb: FormBuilder, 
+              private _assistSvc: AssistanceService, 
+              private _errorsSvc: ErrorsService) { }
 
   contactForm: FormGroup;
   /*-----------------------------*/
@@ -21,22 +27,10 @@ export class ContactFormComponent implements OnInit {
   /*--------------------------------------*/
   // values for dropdowns
   /*------------------------------------- */
-  assistanceDDL: any[];
-
+  assistanceDDL: IAssistServices[];
   /*------------------------------------- */
 
-  errors = [
-    {
-      name: 'required',
-      text: 'Este campo es requerido',
-      rules: ['touched', 'invalid']
-    },
-    {
-      name: 'email',
-      text: 'Debe ser un correo electrónico válido',
-      rules: ['touched', 'invalid']
-    }
-  ];
+  errors: any[];
 
   private _createForm(): FormGroup {
     const formObject: FormGroup = this._fb.group({
@@ -59,18 +53,15 @@ export class ContactFormComponent implements OnInit {
   }
 
   private _fillDDLS(): void {
-    this.assistanceDDL = [
-      { name: 'Plomería', description: 'Plomería - Cod. 456' },
-      { name: 'Carpintería', description: 'Carpintería - Cod. 456' },
-      { name: 'Armado', description: 'Armado - Cod. 456' },
-      { name: 'Mecánica', description: 'Mecánica - Cod. 456' }
-    ];
+    this.assistanceDDL = this._assistSvc.getAssistanceServices();
   }
 
   ngOnInit() {
     this.contactForm = this._createForm();
     this._formBinder();
     this._fillDDLS();
+
+    this.errors = this._errorsSvc.getErrors();
   }
 
   onSubmit() {
