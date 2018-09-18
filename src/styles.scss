@@ -37,3 +37,12 @@ body {
   line-height: $footer-height; /* Vertically center the text there */
   background-color: $asistencia-red;
 }
+
+/* Accordion-group style
+-------------------------------------------------- */
+.assistAccordionGroup {
+  border-radius: 0;
+  margin-bottom: 1rem;
+  background-color: $asistencia-red;
+  color: white;
+}

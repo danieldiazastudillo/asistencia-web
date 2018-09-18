@@ -1,0 +1,13 @@
+<accordion-group (isOpenChange)="logOpen($event)" [panelClass]="customClass">
+  <button class="btn btn-link btn-block clearfix text-white m-0 p-0 text-uppercase" accordion-heading>
+    <div class="d-flex">
+      <div class="mr-auto">
+        <ng-content select=".title"></ng-content>
+      </div>
+      <div class="plus-minus">
+        <i class="fa" [ngClass]="{'fa-plus-circle':!isOpen, 'fa-minus-circle': isOpen}"></i>
+      </div>
+    </div>
+  </button>
+  <ng-content select=".body"></ng-content>
+</accordion-group>

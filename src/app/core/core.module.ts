@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 @NgModule({
   imports: [
     BrowserModule,
-    CommonModule
+    CommonModule,
+    ScrollToModule.forRoot(),
   ],
   exports: [HeaderComponent, FooterComponent],
   declarations: [HeaderComponent, FooterComponent],

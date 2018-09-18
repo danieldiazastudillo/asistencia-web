@@ -7,17 +7,20 @@ import { HomeComponent } from './home/home.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { AssistServicesComponent } from './assist-services/assist-services.component';
 import { AssistStepsComponent } from './assist-steps/assist-steps.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxErrorsModule } from '@ultimate/ngxerrors';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { AssistAccordionComponent } from './assist-accordion/assist-accordion.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   imports: [
     BrowserModule,
     CommonModule,
-    NgbModule,
     NgxErrorsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AccordionModule.forRoot(),
+    NgbModule
   ],
   declarations: [
     AssistStepsComponent,
@@ -25,7 +28,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ContactFormComponent,
     HomeComponent,
     JumbotronComponent,
-    VideoPopperComponent
+    VideoPopperComponent,
+    AssistAccordionComponent
   ],
   exports: [
     AssistStepsComponent,

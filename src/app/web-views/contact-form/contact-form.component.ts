@@ -12,8 +12,8 @@ import { ErrorsService } from '../../services/errors.service';
 })
 export class ContactFormComponent implements OnInit {
 
-  constructor(private _fb: FormBuilder, 
-              private _assistSvc: AssistanceService, 
+  constructor(private _fb: FormBuilder,
+              private _assistSvc: AssistanceService,
               private _errorsSvc: ErrorsService) { }
 
   contactForm: FormGroup;

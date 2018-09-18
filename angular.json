@@ -37,7 +37,8 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/vegas/dist/vegas.min.css"
+              "node_modules/vegas/dist/vegas.min.css",
+              "node_modules/font-awesome/css/font-awesome.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.slim.js",
