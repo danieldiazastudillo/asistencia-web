@@ -1,9 +1,32 @@
 import { IAssistServices } from '../interfaces/assist-services.interface';
 
 export const ASSIST_SERVICES: IAssistServices[] = [
-    { name: 'Plomería', description: 'Plomería - Cod. 456' },
-    { name: 'Carpintería', description: 'Carpintería - Cod. 456' },
-    { name: 'Armado', description: 'Armado - Cod. 456' },
-    { name: 'Mecánica', description: 'Mecánica - Cod. 456' }
-]
-
+  {
+    id: 1,
+    name: 'Plomería',
+    description: 'Plomería - Cod. 456',
+    categoryID: 1,
+    categoryName: 'Servicios Domesticos'
+  },
+  {
+    id: 2,
+    name: 'Instalación Azulejos',
+    description: 'Azulejos - Cod. 123',
+    categoryID: 1,
+    categoryName: 'Servicios Domesticos'
+  },
+  {
+    id: 3,
+    name: 'Instalación Cortinas',
+    description: 'Cortinas - Cod. 456',
+    categoryID: 1,
+    categoryName: 'Servicios Domesticos'
+  },
+  {
+    id: 4,
+    name: 'Armado Cama Elástica',
+    description: 'Cama Elástica - Cod. 456',
+    categoryID: 1,
+    categoryName: 'Servicios Domesticos'
+  }
+];

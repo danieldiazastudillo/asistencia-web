@@ -2,22 +2,18 @@
   <div class="row">
     <div class="col-lg-6 col-sm-12 p-4">
       <accordion>
-        <app-assist-accordion>
-          <div class="title">
-            Incubus
-          </div>
-          <div class="body">
-            11AM
-          </div>
-        </app-assist-accordion>
-        <app-assist-accordion>
-          <div class="title">
-            Los Pericos
-          </div>
-          <div class="body">
-            Complicado y aturdido
-          </div>
-        </app-assist-accordion>
+        <ng-container *ngFor="let service of currentServices">
+          <app-assist-accordion [item]="service" (selectedService)="serviceFromAccordion($event)">
+            <div class="title">
+              {{service.name}}
+            </div>
+            <div class="body">
+              <div class="d-flex flex-row mb-2">
+                {{service.description}}
+              </div>              
+            </div>
+          </app-assist-accordion>
+        </ng-container>
       </accordion>
     </div>
     <div class="col-lg-6 col-sm-12 p-4 text-right">
