@@ -5,7 +5,6 @@
 @import '../node_modules/bootstrap/scss/bootstrap';
 
 $asistencia-red: #fb4343;
-$footer-height: 60px;
 
 .full-content {
   width: 100%;
@@ -14,6 +13,7 @@ $footer-height: 60px;
 
 .asistencia-common-box {
   background-color: #e6e6e6;
+  margin-top: 2.5em;
 }
 
 .asistencia-brand-text {
@@ -26,23 +26,39 @@ html {
   position: relative;
   min-height: 100%;
 }
-body {
-  margin-bottom: $footer-height; /* Margin bottom by footer height */
-}
+
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: $footer-height; /* Set the fixed height of the footer here */
-  line-height: $footer-height; /* Vertically center the text there */
-  background-color: $asistencia-red;
+  background-color: #f3f3f3;
 }
 
 /* Accordion-group style
 -------------------------------------------------- */
 .assistAccordionGroup {
-  border-radius: 0;
+  border-radius: 0px;
+  border: solid 1px white;
   margin-bottom: 1rem;
   background-color: $asistencia-red;
-  color: white;
+  color: black;
+
+  .card-body {
+    background-color: #f2f2f2;
+  }
+
+  .title{
+    font-weight: 600;
+  }
+
+  .btn-primary{
+    color: white;
+    background-color: lightgrey;
+    border-color: lightgrey;
+  }
+
+  .btn-primary:hover{
+background-color: #fb4343;
+border-color: #fb4343;
+  }
 }

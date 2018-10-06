@@ -4,7 +4,7 @@ export const ASSIST_SERVICES: IAssistServices[] = [
     { 
         id: 1, 
         name: 'Plomería', 
-        description: 'Plomería - Cod. 456',
+        description: 'Contenido acordion',
         categoryID: 1,
         categoryName: 'Servicios Domesticos'
     },
