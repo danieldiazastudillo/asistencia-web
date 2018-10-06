@@ -1,0 +1,25 @@
+img.logo{
+    position: relative;
+    display: block;
+    max-width: 250px;
+    height: auto;
+    margin-top: 30px;
+}
+
+p.lead{
+    font-size: 1em;
+}
+
+img.phone{
+    margin-left: 200px;
+   height: 550px;
+   padding-top: 50px;
+}
+
+@media (max-width: 576px) { 
+    img.phone{
+        margin-top: -60px;
+       height: 350px;
+       padding-right: 100px;
+    }
+ }
