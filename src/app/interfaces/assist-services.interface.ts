@@ -4,4 +4,5 @@ export interface IAssistServices {
     description?: string;
     categoryID?: number;
     categoryName?: string;
+    items?: string[];
 }

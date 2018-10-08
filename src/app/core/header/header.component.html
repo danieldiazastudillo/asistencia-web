@@ -1,10 +1,14 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-asistencia py-4 fixed-top">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-asistencia">
   <!-- <a href="/" class="navbar-brand">Asistencia Ahora</a> -->
   <img src="../../../assets/asistencia/logos/logo_AsistenciaAhora_blanco.svg" class="asistencia-logo" />
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar7">
+
+  <button class="navbar-toggler hidden-sm-up" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="navbar-collapse collapse justify-content-stretch" id="navbar7">
+
+  <!-- <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse justify-content-stretch" id="navbar7"> -->
+  <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbar7">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
         <button class="btn btn-link nav-link" [ngx-scroll-to]="'#inicio'">Inicio</button>
@@ -22,6 +26,4 @@
         <a class="nav-link" href="#">Contacto</a>
       </li>
     </ul>
-    <h4 class="ml-4 llamanos"><a href="tel:6003652020" class="text-white">Llámanos <img src="../../../assets/asistencia/iconos/icono-llamar-blanco-02.svg" height="45" /> 600 365 2020</a></h4>
-  </div>
-</nav>
+

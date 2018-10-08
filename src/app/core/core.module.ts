@@ -4,12 +4,14 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   imports: [
     BrowserModule,
     CommonModule,
     ScrollToModule.forRoot(),
+    NgbModule
   ],
   exports: [HeaderComponent, FooterComponent],
   declarations: [HeaderComponent, FooterComponent],

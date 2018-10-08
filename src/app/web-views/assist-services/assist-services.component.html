@@ -9,7 +9,11 @@
             </div>
             <div class="body">
               <div class="d-flex flex-row mb-2">
-                {{service.description}}
+                <ul>
+                  <li *ngFor="let item of service.items">
+                      {{item}}
+                  </li>
+                </ul>
               </div>
             </div>
           </app-assist-accordion>
