@@ -1,11 +1,11 @@
 .jumbo-container {
     min-height: 500px !important;
     background-size: cover;
-    background-color: gray;  
-    background-image: url(/src/assets/asistencia/img-carousel/1440px-1.jpg);
+    background-color: gray;
+    background-image: url(../../../assets/asistencia/img-carousel/1440px-1.jpg);
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;  
+    background-repeat: no-repeat;
 }
 
 $asistencia-gris-oscuro: #e6e6e6;
@@ -19,17 +19,17 @@ $asistencia-gris-oscuro: #e6e6e6;
     .jumbo-container {
         min-height: 500px !important;
         background-size: cover;
-        background-color: gray;  
-        background-image: url(/src/assets/asistencia/img-carousel/1200px.jpg);
+        background-color: gray;
+        background-image: url(../../../assets/asistencia/img-carousel/1200px.jpg);
         background-position: center;
         background-size: cover;
-        background-repeat: no-repeat;  
+        background-repeat: no-repeat;
     }
 }
 
-@media all and (max-width: 992px) { 
+@media all and (max-width: 992px) {
     .jumbo-container {
   background-image: none;
   background-color: #fb4343;
-} 
+}
 }
