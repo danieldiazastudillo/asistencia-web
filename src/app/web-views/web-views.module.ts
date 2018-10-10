@@ -7,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { AssistServicesComponent } from './assist-services/assist-services.component';
 import { AssistStepsComponent } from './assist-steps/assist-steps.component';
-import { NgxErrorsModule } from '@ultimate/ngxerrors';
+import { NgxErrorsModule } from '@hackages/ngxerrors';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { AssistAccordionComponent } from './assist-accordion/assist-accordion.component';

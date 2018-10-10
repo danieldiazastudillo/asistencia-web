@@ -59,7 +59,7 @@ export class ContactFormComponent implements OnInit {
 
   private _setSelectedAssistance(service: IAssistServices) {
     console.log('Svc from Subject', service);
-    this.contactForm.get('assistance').patchValue(service.description);
+    this.contactForm.get('assistance').patchValue(service.name);
     this.assistance = this.contactForm.get('assistance');
   }
 

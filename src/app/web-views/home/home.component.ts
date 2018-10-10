@@ -1,6 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { IAssistServices } from '../../interfaces/assist-services.interface';
-import { ContactFormComponent } from '../contact-form/contact-form.component';
+
 
 @Component({
   selector: 'app-home',
@@ -9,6 +9,7 @@ import { ContactFormComponent } from '../contact-form/contact-form.component';
 })
 export class HomeComponent implements OnInit {
 
+  @ViewChild('vegas') colorbox: ElementRef;
 
   constructor() { }
 
@@ -16,10 +17,8 @@ export class HomeComponent implements OnInit {
 
   serviceFromSection(service: IAssistServices) {
     this.selectedService = service;
-    console.log('In home', this.selectedService);
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }

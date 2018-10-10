@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { WebViewsModule } from './web-views/web-views.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { WebViewsModule } from './web-views/web-views.module';
     AppRoutingModule,
     CoreModule.forRoot(),
     ScrollToModule.forRoot(),
-    WebViewsModule.forRoot()
+    WebViewsModule.forRoot(),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

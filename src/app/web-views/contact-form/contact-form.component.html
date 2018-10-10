@@ -41,8 +41,8 @@
         <div class="form-group">
           <select name="assistance" formControlName="assistance" class="form-control" [class.is-valid]="assistance.valid" [class.is-invalid]="assistance.touched && assistance.invalid">
             <option [value]="null">Seleccione su asistencia...</option>
-            <option *ngFor="let value of assistanceDDL" [ngValue]="value.description">
-              {{value.name}}
+            <option *ngFor="let assistance of assistanceDDL" [ngValue]="assistance.name">
+              {{assistance.name}}
             </option>
           </select>
 
@@ -73,4 +73,5 @@
       <button type="submit" class="btn btn-lg btn-primary btn-block" [class.btn-success]="contactForm.valid" [disabled]="contactForm.invalid">AGENDAR SERVICIO</button>
     </div>
   </div>
+
 </form>

@@ -1,6 +1,21 @@
-<section class="full-content jumbo-container py-4" id="inicio">
-  <app-jumbotron class="my-4"></app-jumbotron>
+<section class="full-content jumbo-container" id="inicio">
+  <div class="d-none d-sm-block py-4" id="vegas" #vegas>
+    <app-jumbotron class="my-4"></app-jumbotron>
+  </div>
+
+  <div class="d-block d-sm-none">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 p-4 asistencia-common-box">
+          <h2>Agenda nuestra visita</h2>
+          <p class="lead">Programa cuando quieras el servicio que necesitas.</p>
+          <app-contact-form></app-contact-form>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
 
 <section class="full-content video-popper-container py-4" id="quienes-somos">
   <app-video-popper></app-video-popper>
