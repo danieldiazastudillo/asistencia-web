@@ -12,6 +12,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { AssistAccordionComponent } from './assist-accordion/assist-accordion.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FloatingFormComponent } from './floating-form/floating-form.component';
 
 @NgModule({
   imports: [
@@ -29,7 +30,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HomeComponent,
     JumbotronComponent,
     VideoPopperComponent,
-    AssistAccordionComponent
+    AssistAccordionComponent,
+    FloatingFormComponent
   ],
   exports: [
     AssistStepsComponent,

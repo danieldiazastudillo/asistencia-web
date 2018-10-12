@@ -1,0 +1,16 @@
+:host {
+  width: 550px;
+  min-height: 800px;
+  position: absolute;
+  top: 100px;
+  left: 20%;
+  z-index: 1;
+}
+
+
+.floating-container {
+  width: 100%;
+  height: 650px;
+  background-color: #f2f2f2;
+  border: 1px solid darken(#f2f2f2, 10%);
+}
