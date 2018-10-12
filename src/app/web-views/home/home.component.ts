@@ -1,5 +1,7 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewChecked } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewChecked, PLATFORM_ID, Inject } from '@angular/core';
 import { IAssistServices } from '../../interfaces/assist-services.interface';
+import 'jquery';
+import { isPlatformBrowser } from '@angular/common';
 declare var $: any;
 
 @Component({
@@ -11,7 +13,7 @@ export class HomeComponent implements OnInit, AfterViewChecked {
   @ViewChild('vegas')
   vegas: ElementRef;
 
-  constructor() {}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   vegasConfig = {
     slides: [
@@ -29,7 +31,9 @@ export class HomeComponent implements OnInit, AfterViewChecked {
   }
 
   ngOnInit() {
-    $(this.vegas.nativeElement).vegas(this.vegasConfig);
+    if (isPlatformBrowser(this.platformId)) {
+      $(this.vegas.nativeElement).vegas(this.vegasConfig);
+    }
   }
 
   ngAfterViewChecked() {}
