@@ -4,6 +4,8 @@ import { AssistanceService } from '../../services/assistance.service';
 import { IAssistServices } from '../../interfaces/assist-services.interface';
 import { ErrorsService } from '../../services/errors.service';
 import { AssistanceListenerService } from '../../services/assistance-listener.service';
+import { MailerService } from '../../services/mailer.service';
+import { IEmail } from '../../interfaces/email.interface';
 
 @Component({
   selector: 'app-contact-form',
@@ -14,7 +16,8 @@ export class ContactFormComponent implements OnInit {
   constructor(private _fb: FormBuilder,
               private _assistSvc: AssistanceService,
               private _errorsSvc: ErrorsService,
-              private _assistListenerSvc: AssistanceListenerService) {}
+              private _assistListenerSvc: AssistanceListenerService,
+              private _mailerService: MailerService) {}
 
   contactForm: FormGroup;
   /*-----------------------------*/
@@ -77,15 +80,17 @@ export class ContactFormComponent implements OnInit {
   }
 
   onSubmit() {
-    const obj: any = {
+    const obj: IEmail = {
       name: this.contactForm.get('nameLastName').value,
       phone: this.contactForm.get('phone').value,
+      email: this.contactForm.get('email').value,
       assistance: this.contactForm.get('assistance').value,
       message: this.contactForm.get('message').value
     };
 
-    const valuesFromForm = `${obj.name} | ${obj.phone} | ${obj.assistance} | ${obj.message}`;
+    this._mailerService.sendEmail(obj).subscribe(res => {
+      console.log('Email sent...', res);
+    });
 
-    alert(valuesFromForm);
   }
 }
