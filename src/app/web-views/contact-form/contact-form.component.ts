@@ -66,18 +66,6 @@ export class ContactFormComponent implements OnInit {
     this.assistance = this.contactForm.get('assistance');
   }
 
-  ngOnInit() {
-    this.contactForm = this._createForm();
-    this._formBinder();
-    this._fillDDLS();
-
-    this.errors = this._errorsSvc.getErrors();
-
-    this._assistListenerSvc.listenAssistance().subscribe((service: IAssistServices) => {
-      console.log('Changed obs...', service);
-      this._setSelectedAssistance(service);
-    });
-  }
 
   onSubmit() {
     const obj: IEmail = {
@@ -90,7 +78,24 @@ export class ContactFormComponent implements OnInit {
 
     this._mailerService.sendEmail(obj).subscribe(res => {
       console.log('Email sent...', res);
+      this.resetForm();
     });
+  }
 
+  resetForm() {
+    this.contactForm.reset();
+  }
+
+  ngOnInit() {
+    this.contactForm = this._createForm();
+    this._formBinder();
+    this._fillDDLS();
+
+    this.errors = this._errorsSvc.getErrors();
+
+    this._assistListenerSvc.listenAssistance().subscribe((service: IAssistServices) => {
+      console.log('Changed obs...', service);
+      this._setSelectedAssistance(service);
+    });
   }
 }

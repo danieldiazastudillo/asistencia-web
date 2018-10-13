@@ -11,7 +11,7 @@ import { tap } from 'rxjs/operators';
 export class MailerService {
   constructor(private _http: HttpClient, private _toastr: ToastrService) {}
 
-  private emailPHP = '../../assets/email.php';
+  private emailPHP = '../../assets/mailer/sendmail.php';
 
   sendEmail(message: IEmail): Observable<IEmail> | any {
     return this._http.post(this.emailPHP, message).pipe(
