@@ -6,6 +6,7 @@ import { ErrorsService } from '../../services/errors.service';
 import { AssistanceListenerService } from '../../services/assistance-listener.service';
 import { MailerService } from '../../services/mailer.service';
 import { IEmail } from '../../interfaces/email.interface';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-contact-form',
@@ -17,7 +18,8 @@ export class ContactFormComponent implements OnInit {
               private _assistSvc: AssistanceService,
               private _errorsSvc: ErrorsService,
               private _assistListenerSvc: AssistanceListenerService,
-              private _mailerService: MailerService) {}
+              private _mailerService: MailerService,
+              private _toastr: ToastrService) {}
 
   contactForm: FormGroup;
   /*-----------------------------*/
@@ -84,6 +86,12 @@ export class ContactFormComponent implements OnInit {
 
   resetForm() {
     this.contactForm.reset();
+  }
+
+  showToastr() {
+    this._toastr.success('Este es el body', 'Título del Toastr', {
+      timeOut: 30000
+    });
   }
 
   ngOnInit() {
