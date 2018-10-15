@@ -1,12 +1,19 @@
 :host {
   width: 550px;
-  min-height: 600px;
+  min-height: 650px;
   position: absolute;
   top: 100px;
   left: 20%;
   z-index: 1;
-}
 
+  @media (min-width: 768px) {
+    left: 2%;
+  }
+
+  @media (min-width: 992px) {
+    left: 8%;
+  }
+}
 
 .floating-container {
   width: 100%;
