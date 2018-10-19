@@ -17,9 +17,9 @@ export class HomeComponent implements OnInit, AfterViewChecked {
 
   vegasConfig = {
     slides: [
-      { src: '../../../assets/asistencia/img-carousel/carousel-1.jpg' },
-      { src: '../../../assets/asistencia/img-carousel/carousel-2.jpg' },
-      { src: '../../../assets/asistencia/img-carousel/carousel-3.jpg' }
+      { src: '../../../assets/asistencia/img-header/img-1.jpg' },
+      { src: '../../../assets/asistencia/img-header/img-2.jpg' },
+      { src: '../../../assets/asistencia/img-header/img-3.jpg' }
     ],
     timer: false
   };

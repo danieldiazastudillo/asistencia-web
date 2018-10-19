@@ -13,6 +13,8 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { AssistAccordionComponent } from './assist-accordion/assist-accordion.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FloatingFormComponent } from './floating-form/floating-form.component';
+import { EmergencyComponent } from './emergency/emergency.component';
+import { LlamanosHolderComponent } from './llamanos-holder/llamanos-holder.component';
 
 @NgModule({
   imports: [
@@ -31,7 +33,9 @@ import { FloatingFormComponent } from './floating-form/floating-form.component';
     JumbotronComponent,
     VideoPopperComponent,
     AssistAccordionComponent,
-    FloatingFormComponent
+    FloatingFormComponent,
+    EmergencyComponent,
+    LlamanosHolderComponent
   ],
   exports: [
     AssistStepsComponent,
@@ -39,7 +43,9 @@ import { FloatingFormComponent } from './floating-form/floating-form.component';
     ContactFormComponent,
     HomeComponent,
     JumbotronComponent,
-    VideoPopperComponent
+    VideoPopperComponent,
+    EmergencyComponent,
+    LlamanosHolderComponent
   ],
   providers: [],
 })
