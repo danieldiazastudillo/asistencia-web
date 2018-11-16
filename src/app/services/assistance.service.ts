@@ -16,4 +16,12 @@ export class AssistanceService {
   getAssistanceServices(): IAssistServices[] {
     return this.assistServices;
   }
+
+  getAssistanceServiceByName(serviceName: string): IAssistServices {
+    const service: IAssistServices = this.assistServices.find(item => {
+      return item.name === serviceName;
+    });
+
+    return service;
+  }
 }

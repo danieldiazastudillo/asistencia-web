@@ -15,6 +15,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FloatingFormComponent } from './floating-form/floating-form.component';
 import { EmergencyComponent } from './emergency/emergency.component';
 import { LlamanosHolderComponent } from './llamanos-holder/llamanos-holder.component';
+import { ModalServicesComponent } from './modal-services/modal-services.component';
 
 @NgModule({
   imports: [
@@ -35,7 +36,8 @@ import { LlamanosHolderComponent } from './llamanos-holder/llamanos-holder.compo
     AssistAccordionComponent,
     FloatingFormComponent,
     EmergencyComponent,
-    LlamanosHolderComponent
+    LlamanosHolderComponent,
+    ModalServicesComponent
   ],
   exports: [
     AssistStepsComponent,
